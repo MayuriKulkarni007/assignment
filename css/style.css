@@ -1,0 +1,227 @@
+body{
+    margin: 0px;
+    background: rgb(255,247,173);
+background: linear-gradient(90deg, rgba(255,247,173,1) 0%, rgba(255,247,173,1) 26%, rgba(255,175,243,1) 67%);
+}
+
+nav ul{
+    background-color: #ff7171;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px;
+    height: 50px;
+    font: black;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+}
+
+nav ul img{
+    height: 40px;
+}
+
+.heroSection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+.heroText{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.heroText div{
+    margin: 120px;
+}
+
+.heroText h1{
+    font-size: 47px;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+}
+
+.heroText p{
+    font-size: 18px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+.heroText button{
+    background-color: #ff7171;
+    font-size: 16px;
+    height: 50px;
+    width: 200px;
+    color: white;
+    border: none;
+    margin-top: 40px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+
+.heroImage{
+    width: 50%; 
+    background-image: url('/img/pexels-robin-stickel-70497.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cardSection{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cardImage{
+   margin: 10px;
+   width: 40%;
+}
+
+.imggrid{
+    display: grid;
+    grid-template-columns: 18vw 18vw;
+    grid-template-rows: 18vw 18vw;
+    gap:20px;
+}
+
+.gimg1{
+    background-image: url('/img/pexels-rachel-claire-6752433.jpg');
+    background-size: cover;
+}
+
+.gimg2{
+    grid-row: span 2; 
+    background-image: url('/img/pexels-mister-mister-3434523.jpg');
+    background-size: cover;
+}
+
+.gimg3 {
+    background-image: url('/img/pexels-eva-bronzini-6141651.jpg');
+    background-size: cover;
+}
+
+.cardText{
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+
+.card {
+    background-color: #ff7171;
+    padding: 30px;
+    width: 500px;
+}
+
+.card p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+}
+
+.card img{
+    height: 12px;
+    width: 18px;
+}
+
+@media(max-width: 748px){
+    body{
+        overflow: auto;
+    }
+    li{
+        display: none;
+    }
+
+    nav ul{
+        justify-content: flex-end;
+    }
+
+    nav ul img{
+        margin-right: 10px;
+    }
+
+    .heroSection{
+        display: flex;
+        flex-direction: column;  
+        gap: 30px
+    }
+    .heroImage{
+        background-image: url('/img/pexels-robin-stickel-70497.jpg');
+        width: 100%;
+        background-size: 900px;
+        height: 400px;
+    }
+    
+    .heroText{
+        width: 100%;
+    }
+    .heroText div{
+        margin: 10px;
+    }
+
+    .cardImage{
+        margin: 10px;
+        width: 40%;
+    }
+
+    .imggrid{
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+        grid-template-rows: 40vw 40vw;
+        gap:20px
+    }
+
+    .cardSection{
+        flex-direction: column;
+        margin: 30px;
+        gap: 20px;
+    }
+    
+    .card{
+        margin: auto;
+    }
+
+    .cardText{
+        background-color: #ff7171;
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 480px){
+    .imggrid{
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+        grid-template-rows: 40vw 40vw;
+        gap:20px
+    }
+
+    .cardSection{
+        margin: 10px;
+    }
+
+    .cardImage{
+        margin: 10px;
+        width: 100%;
+    }
+}
